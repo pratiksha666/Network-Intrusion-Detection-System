@@ -54,11 +54,4 @@ The CSV must contain `label` (0 = Normal, 1 = Attack) and the categorical column
 5. **Network Traffic Prediction** - predict on a test-set sample or a new CSV.
 6. **Download Results** - download predictions as CSV.
 
-## Viva Notes
 
-- `id` is dropped (just a row number) and `attack_cat` is dropped (it reveals the label = data leakage).
-- Imputer, scaler and encoder live inside a Scikit-learn `Pipeline`, so they are fitted on **training data only** (no data leakage).
-- `train_test_split(..., stratify=y)` keeps the Normal/Attack ratio equal in train and test sets.
-- Numeric columns: median imputation + `StandardScaler`. Categorical columns (`proto`, `service`, `state`): most-frequent imputation + `OneHotEncoder(handle_unknown="ignore")`.
-- SVM is slow on large data, so it is trained on a stratified sample (adjustable in the Model Training sidebar).
-- Metrics are computed on the untouched test set; no fake values.
