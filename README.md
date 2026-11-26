@@ -10,20 +10,20 @@ A beginner-friendly web application that classifies network traffic as **Normal 
 
 ```
 Network-Intrusion-Detection/
-├── app.py                  # Streamlit frontend (all pages)
+├── app.py                  
 ├── requirements.txt
 ├── README.md
 ├── data/
-│   ├── raw/                # put the UNSW-NB15 CSV here (optional, you can also upload in the app)
+│   ├── raw/                
 │   └── processed/
-├── models/                 # trained models (.joblib) are saved here
+├── models/                
 ├── src/
 │   ├── __init__.py
-│   ├── data_loader.py      # load + validate CSV, missing values
-│   ├── preprocessing.py    # cleaning, split, ColumnTransformer
-│   ├── train_model.py      # build pipelines, train, save with Joblib
-│   ├── predict.py          # load saved model, predict Normal/Attack
-│   └── evaluation.py       # metrics, confusion matrix, comparison chart
+│   ├── data_loader.py     
+│   ├── preprocessing.py    
+│   ├── train_model.py      
+│   ├── predict.py          
+│   └── evaluation.py      
 └── assets/
 ```
 
@@ -32,8 +32,8 @@ Network-Intrusion-Detection/
 ```bash
 cd Network-Intrusion-Detection
 python -m venv venv
-venv\Scripts\activate          # Windows
-# source venv/bin/activate     # Linux / macOS
+venv\Scripts\activate          
+# source venv/bin/activate     
 pip install -r requirements.txt
 streamlit run app.py
 ```
@@ -54,4 +54,15 @@ The CSV must contain `label` (0 = Normal, 1 = Attack) and the categorical column
 5. **Network Traffic Prediction** - predict on a test-set sample or a new CSV.
 6. **Download Results** - download predictions as CSV.
 
+## Future Scope
+1.Implement real-time network monitoring.
+2.Improve accuracy using advanced ML algorithms.
+3.Add automatic security alerts.
+4.Deploy the system on cloud platforms.
+5.Detect more types of cyberattacks.   
+
+## Project Objectives
+1.To detect suspicious network traffic using Machine Learning.
+2.To classify normal and malicious network activities.
+3.To use Random Forest for intrusion detection.
 
