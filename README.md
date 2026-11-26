@@ -56,13 +56,9 @@ The CSV must contain `label` (0 = Normal, 1 = Attack) and the categorical column
 
 ## Future Scope
 1.Implement real-time network monitoring.
-
 2.Improve accuracy using advanced ML algorithms.
-
 3.Add automatic security alerts.
-
 4.Deploy the system on cloud platforms.
-
 5.Detect more types of cyberattacks.
 
 ## Project Objectives
